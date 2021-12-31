@@ -14,7 +14,9 @@ export default function Login() {
   // is used by `useSession()`.
   const { data: session, status } = useSession();
   // const router = useRouter();
-  return <div>Access Token: {!!session && session.accessToken || "null"}</div>
+  return (
+    <div>Access Token: {(!!session && session.accessToken) || "null"}</div>
+  );
 
   // return (
   //   <div className="flex flex-col items-center justify-center min-h-screen py-2">
