@@ -1,13 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image';
-import Link from 'next/link';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
         <title>Schach</title>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -20,15 +21,13 @@ export default function Home() {
               alt="Schach logo"
             />
             <h1 className="text-6xl font-bold">
-              Willkommen beim{' '}
+              Willkommen beim{" "}
               <a className="text-blue-600" href="">
                 Schach
               </a>
             </h1>
 
-            <p className="mt-3 text-2xl">
-              wo Legenden geboren werden
-            </p>
+            <p className="mt-3 text-2xl">wo Legenden geboren werden</p>
           </div>
           <div className="flex flex-col w-1/6">
             <Link href="/login">
@@ -44,36 +43,22 @@ export default function Home() {
           </div>
         </div>
 
-
         <div className="flex flex-col items-center justify-center relative mt-6 w-full">
-
-          <Image className="absolute z-0"
-                 width={1080}
-                 height={1080}
-                 objectFit='cover'
-                 objectPosition='center'
-                 src="/chess-board.jpg"
-                 alt="Schach HD"
+          <Image
+            className="absolute z-0"
+            width={1080}
+            height={1080}
+            objectFit="cover"
+            objectPosition="center"
+            src="/chess-board.jpg"
+            alt="Schach HD"
           />
 
-          <div className="absolute z-10">
-            Hello World
-          </div>
-
+          <button className="absolute z-10 button play" />
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/knight.png" alt="Schach Logo" width={20} height={20} className="h-4 ml-2"/>
-        </a>
-      </footer>
+      <Footer />
     </div>
-  )
+  );
 }
