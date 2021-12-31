@@ -31,7 +31,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col w-1/6">
             <Link href="/login">
-              <a className="hover:text-black text-slate-700 py-2 px-4 rounded">
+              <a className="hover:text-black text-slate-600 py-2 px-4 rounded">
                 Anmelden
               </a>
             </Link>
