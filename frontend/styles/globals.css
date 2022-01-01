@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button.play {
+  width: 120px;
+  height: 150px;
+  border-style: solid;
+  border-width: 80px 0 80px 150px;
+  border-color: transparent transparent transparent darkviolet;
+  border-radius: 10px;
+}
