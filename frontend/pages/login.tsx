@@ -1,22 +1,37 @@
-import React from "react";
+import { useSession, signIn, signOut } from "next-auth/react"
+
+export default function Component() {
+  const { data: session } = useSession()
+  if (session) {
+    return (
+      <>
+        Signed in as {session.user!.email} <br />
+        <button onClick={() => signOut()}>Sign out</button>
+      </>
+    )
+  }
+  return (
+    <>
+      Not signed in <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
+  )
+}
+
 // import { GetServerSideProps } from "next"
 // import type { Session } from "next-auth"
-import { signIn, signOut, useSession } from "next-auth/react";
+// import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 
+
 /** Class to handle the login. */
-export default function Login() {
+// export default function Login() {
   // As this page uses Server Side Rendering, the `session` will be already
   // populated on render without needing to go through a loading stage.
   // This is possible because of the shared context configured in `_app.js` that
   // is used by `useSession()`.
-  const { data: session, status } = useSession();
-  // const router = useRouter();
-  return (
-    <div>Access Token: {(!!session && session.accessToken) || "null"}</div>
-  );
 
   // return (
   //   <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -50,7 +65,7 @@ export default function Login() {
   //
   //   </>
   // )
-}
+// }
 
 // Export the `session` prop to use sessions with Server Side Rendering
 // export const getServerSideProps: GetServerSideProps<{
