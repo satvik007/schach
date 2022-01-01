@@ -12,7 +12,7 @@ export default function Page() {
 
               <div className={styles.contant_box_404}>
                 <h3 className="text-4xl">
-                  Looks like you're lost!
+                  Looks like you&apos;re lost!
                 </h3>
 
                 <Link href="/">
