@@ -5,13 +5,13 @@ import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <>
       <Head>
         <title>Schach</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 py-2 min-h-screen text-center">
         <div className="flex items-center justify-center w-full flex-1 px-20 text-center">
           <div className="w-5/6">
             <Image
@@ -54,11 +54,12 @@ export default function Home() {
             alt="Schach HD"
           />
 
-          <button className="absolute z-10 button play" />
+          <Link href="/live">
+            <a className="absolute z-10 button play"/>
+          </Link>
         </div>
       </main>
 
-      <Footer />
-    </div>
+    </>
   );
 }
