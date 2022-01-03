@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
             <Image
               width={100}
               height={100}
-              src="/knight.png"
+              src="/images/logo/knight.png"
               alt="Schach logo"
             />
             <h1 className="text-6xl font-bold">
@@ -46,11 +45,11 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center relative mt-6 w-full">
           <Image
             className="absolute z-0"
-            width={1080}
-            height={1080}
+            width={720}
+            height={720}
             objectFit="cover"
             objectPosition="center"
-            src="/chess-board.jpg"
+            src="/images/background/chess-board.jpg"
             alt="Schach HD"
           />
 

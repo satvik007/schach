@@ -4,8 +4,9 @@ type ChessContainerProps = {
   gameId : string;
 }
 
-export default class ChessContainer extends React.Component<ChessContainerProps, unknown> {
+export default class ChessLayout extends React.Component<ChessContainerProps, unknown> {
   render() {
+
     return (
       <div className="cg-container">
 
@@ -14,6 +15,12 @@ export default class ChessContainer extends React.Component<ChessContainerProps,
   }
 }
 
-class ChessLayout extends React.Component<{}, unknown> {
+class ChessBoard extends React.Component<{}, unknown> {
+  render() {
+    return (
+      <div className="cg-board">
 
+      </div>
+    );
+  }
 }

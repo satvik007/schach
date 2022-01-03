@@ -11,7 +11,7 @@ export default function Footer() {
       >
         Powered by{" "}
         <Image
-          src="/knight.png"
+          src="/images/logo/knight.png"
           alt="Schach Logo"
           width={20}
           height={20}
