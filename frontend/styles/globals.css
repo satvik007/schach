@@ -18,3 +18,8 @@
   padding-bottom: 100%;
   width: 100%;
 }
+
+.cg-board-image {
+  position: absolute;
+  padding: 5px;
+}

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Script from 'next/script';
 
 export default function Live() {
-  console.log(`Schach is Open Source! Help us improve it. https://github.com/satvik007/schach`);
+  console.log(`Schach is Open Source! https://github.com/satvik007/schach`);
 
   const router = useRouter()
   const { gameId } = router.query
@@ -25,8 +25,6 @@ export default function Live() {
         {/*<ChessLayout gameId={gameId}/>*/}
 
       </main>
-
-
 
     </>
   );
