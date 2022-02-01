@@ -1,2 +1,4 @@
-declare let clientPromise: Promise<MongoClient>;
-export default clientPromise;
+import { MongoClient } from 'mongodb'
+
+declare let clientPromise: Promise<MongoClient>
+export default clientPromise

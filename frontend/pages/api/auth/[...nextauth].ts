@@ -1,13 +1,13 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
+import NextAuth from 'next-auth'
+import GithubProvider from 'next-auth/providers/github'
 // import TwitterProvider from "next-auth/providers/twitter"
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
-import clientPromise from "../../../lib/mongodb"
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
+import clientPromise from '../../../lib/mongodb'
 
-const {GITHUB_ID, GITHUB_SECRET, TWITTER_ID, TWITTER_SECRET} = process.env;
+const { GITHUB_ID, GITHUB_SECRET, TWITTER_ID, TWITTER_SECRET } = process.env
 
 if (!GITHUB_ID || !GITHUB_SECRET || !TWITTER_ID || !TWITTER_SECRET) {
-  throw new Error("Missing environment variables")
+  throw new Error('Missing environment variables')
 }
 
 // For more information on each option (and a full list of options) go to

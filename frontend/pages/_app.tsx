@@ -1,8 +1,7 @@
-import { SessionProvider } from "next-auth/react";
-import type { AppProps } from "next/app";
-import "../styles/globals.css";
-import "../styles/broke.css";
-import Layout from "../components/layout";
+import { SessionProvider } from 'next-auth/react'
+import type { AppProps } from 'next/app'
+import '../styles/main.css'
+import Layout from '../components/layout'
 
 // Use the <SessionProvider> to improve performance and allow components that call
 // `useSession()` anywhere in your application to access the `session` object.
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </SessionProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

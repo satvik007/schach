@@ -1,7 +1,8 @@
-import Footer from "./footer";
+import Footer from './footer'
+import React from 'react'
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -10,5 +11,5 @@ export default function Layout({ children }: LayoutProps) {
       {children}
       <Footer />
     </>
-  );
+  )
 }

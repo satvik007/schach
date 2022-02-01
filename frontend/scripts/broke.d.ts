@@ -1,1 +1,1 @@
-export default function brokeScript(): void;
+export default function brokeScript(): void

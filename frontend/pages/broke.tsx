@@ -1,8 +1,7 @@
-import React from 'react';
-import brokeScript from "../scripts/broke.js";
+import React from 'react'
+import brokeScript from '../scripts/broke.js'
 
 export default class Broke extends React.Component<unknown, unknown> {
-
   render() {
     return (
       <>
@@ -11,9 +10,10 @@ export default class Broke extends React.Component<unknown, unknown> {
           <link rel="icon" href="/favicon.ico" />
         </head>
         <main className="min-h-screen">
-          <div className="illustration" dangerouslySetInnerHTML={{
-            __html:
-              `<div class="pencil-color">
+          <div
+            className="illustration"
+            dangerouslySetInnerHTML={{
+              __html: `<div class="pencil-color">
             <div class="pencil-color-left">
               <svg id="pencil-color-left" xmlns="http://www.w3.org/2000/svg"
                    x="0px" y="0px" viewBox="0 0 2404 1090.6"
@@ -85,17 +85,16 @@ export default class Broke extends React.Component<unknown, unknown> {
   <!--            <path id="four-left" class="st0" d="M983.1,826.6h-260l196-265v362"-->
   <!--                  style="stroke-dasharray: 951.607, 951.607; stroke-dashoffset: 0px;"></path>-->
   <!--        </svg>-->
-  <!--        </div>-->`
-          }}>
-
-          </div>
+  <!--        </div>-->`,
+            }}
+          ></div>
           <h2>Something Broke</h2>
         </main>
       </>
-    );
+    )
   }
 
   componentDidMount() {
-    brokeScript();
+    brokeScript()
   }
 }
