@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -9,9 +9,9 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{" "}
+        Powered by{' '}
         <Image
-          src="/knight.png"
+          src="/images/logo/knight.png"
           alt="Schach Logo"
           width={20}
           height={20}
@@ -19,5 +19,5 @@ export default function Footer() {
         />
       </a>
     </footer>
-  );
+  )
 }
